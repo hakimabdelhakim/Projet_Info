@@ -1,0 +1,45 @@
+﻿{% extends 'portal/base.html' %}
+{% block content %}
+<main class="max-w-[1400px] mx-auto px-4 py-6 space-y-4">
+  <div class="bg-white border rounded-card p-4 overflow-x-auto">
+    <form method="post">
+      {% csrf_token %}
+      <div class="flex items-center justify-between mb-3">
+        <div class="text-small text-neutral-600">Disponible: <span class="font-semibold text-neutral-900">{{ available|floatformat:0 }} MAD</span> â€” AprÃ¨s sÃ©lection: <span class="font-semibold {% if after < 0 %}text-danger-600{% else %}text-primary{% endif %}">{{ after|floatformat:0 }} MAD</span></div>
+        <div class="flex gap-2">
+          <button name="action" value="toggle_all" class="h-9 px-3 rounded-input border">Tout basculer</button>
+          <button name="action" value="approve" class="h-9 px-4 rounded-input gradient-ocp text-white">Approuver</button>
+        </div>
+      </div>
+      <table class="min-w-[1000px] w-full">
+        <thead class="bg-neutral-50">
+          <tr>
+            <th class="p-3 text-left text-small">SÃ©lect.</th>
+            <th class="p-3 text-left text-small">Code</th>
+            <th class="p-3 text-left text-small">DÃ©signation</th>
+            <th class="p-3 text-right text-small">QuantitÃ©</th>
+            <th class="p-3 text-right text-small">Prix unit.</th>
+            <th class="p-3 text-right text-small">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for l in lines %}
+          <tr class="border-t hover:bg-neutral-50">
+            <td class="p-3">
+              <button name="action" value="toggle" class="h-8 px-2 rounded-input border" formaction="" formmethod="post" onclick="this.form.line_id.value='{{ l.id }}'">{% if l.selected %}âœ”{% else %}&nbsp;{% endif %}</button>
+            </td>
+            <td class="p-3 font-mono text-small">{{ l.part.code }}</td>
+            <td class="p-3 text-small">{{ l.part.designation }}</td>
+            <td class="p-3 text-right text-small">{{ l.quantity }}</td>
+            <td class="p-3 text-right text-small">{{ l.unit_price }}</td>
+            <td class="p-3 text-right text-small">{{ l.total }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <input type="hidden" name="line_id" />
+    </form>
+  </div>
+</main>
+{% endblock %}
+

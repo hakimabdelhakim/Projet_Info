@@ -1,0 +1,783 @@
+@cété-variétéark (&:is(.dark *));
+
+@impétérl(étés://fétégoogleapis.com/css2?family=été:wété00;500;600;700&display=swap');
+
+:rété
+  --fétéize: 16px;
+  
+  /* OCP Official Brand Colors */
+  --ocp-green: #6BA539;
+  --ocp-green-dark: #3B6B22;
+  --ocp-green-liété#A8D08D;
+  --ocp-blue: #0B3D91;
+  --ocp-gray: #F4F5F7;
+  --ocp-black: #1C1C1C;
+  
+  /* Primary - OCP Green */
+  --primary: #6BA539;
+  --primary-dark: #3B6B22;
+  --primary-liété#A8D08D;
+  --primary-foreground: #ffffff;
+  
+  /* Secondary - OCP Blue */
+  --secondary: #0B3D91;
+  --secondary-foreground: #ffffff;
+  
+  /* Success - OCP Green shades */
+  --succès-50: #F0F9EB;
+  --succès-100: #D9F0C7;
+  --succès-500: #6BA539;
+  --succès-600: #3B6B22;
+  
+  --warning-50: #FFFBEB;
+  --warning-500: #F59E0B;
+  --warning-600: #D97706;
+  
+  --danger-50: #FEF2F2;
+  --danger-500: #DC2626;
+  --danger-600: #B91C1C;
+  
+  --info-50: #EFF6FF;
+  --info-500: #0B3D91;
+  --info-600: #082D6F;
+  
+  /* Nétéls Scale - OCP inspired */
+  --nétél-50: #F9FAFB;
+  --nétél-100: #F4F5F7;
+  --nétél-200: #E8EAED;
+  --nétél-300: #D1D5DB;
+  --nétél-400: #9CA3AF;
+  --nétél-500: #6B7280;
+  --nétél-600: #4B5563;
+  --nétél-700: #374151;
+  --nétél-800: #1C1C1C;
+  --nétél-900: #0F0F0F;
+  
+  /* Background & Surface */
+  --background: #F9FAFB;
+  --foreground: #1C1C1C;
+  --card: #ffffff;
+  --card-foreground: #1C1C1C;
+  --popover: #ffffff;
+  --popover-foreground: #1C1C1C;
+  
+  /* Adéténal UI */
+  --été: #F4F5F7;
+  --été-foreground: #6B7280;
+  --accété#A8D08D;
+  --accétéoreground: #1C1C1C;
+  --détéctive: #DC2626;
+  --détéctive-foreground: #ffffff;
+  --border: #E8EAED;
+  --inététransparent;
+  --inétéackground: #F9FAFB;
+  --sété-background: #D1D5DB;
+  --ring: #6BA539;
+  
+  /* Chété- OCP Brand Colors */
+  --chété: #6BA539;
+  --chété: #0B3D91;
+  --chété: #A8D08D;
+  --chété: #3B6B22;
+  --chété: #F59E0B;
+  
+  /* Border Radius - OCP Design */
+  --radius-card: 12px;
+  --radius-inété8px;
+  --radius-badge: 8px;
+  --radius: 8px;
+  
+  /* Eleéténs (box-shadow) - OCP Sétéhadows */
+  --eleétén-1: 0 1px 3px 0 rgba(0 0 0 / 0.06);
+  --eleétén-2: 0 2px 8px 0 rgba(0 0 0 / 0.08);
+  --eleétén-4: 0 4px 12px 0 rgba(0 0 0 / 0.1);
+  --eleétén-24: 0 25px 50px -12px rgba(0 0 0 / 0.25);
+  
+  /* OCP Gradiété/
+  --gradiétécp: linear-gradiété35deg, #6BA539 0%, #3B6B22 100%);
+  --gradiétécp-liétélinear-gradiété35deg, #A8D08D 0%, #6BA539 100%);
+  
+  /* Typography Scale */
+  étét-h1: 28px;
+  --line-h1: 36px;
+  étét-h2: 22px;
+  --line-h2: 32px;
+  étét-h3: 18px;
+  --line-h3: 28px;
+  étét-body: 14px;
+  --line-body: 22px;
+  étét-small: 12px;
+  --line-small: 18px;
+  
+  /* Fétéeiété*/
+  --fétéeiétéedium: 500;
+  --fétéeiétéormal: 400;
+  --fétéeiétéemibold: 600;
+  
+  /* Sidebar - OCP */
+  --sidebar: #ffffff;
+  --sidebar-foreground: #1C1C1C;
+  --sidebar-primary: #6BA539;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accété#F4F5F7;
+  --sidebar-accétéoreground: #1C1C1C;
+  --sidebar-border: #E8EAED;
+  --sidebar-ring: #6BA539;
+}
+
+.dark {
+  /* Dark Mode - OCP Design Sété */
+  --background: #1C1C1C;
+  --foreground: #F9FAFB;
+  --card: #2A2A2A;
+  --card-foreground: #F9FAFB;
+  --popover: #2A2A2A;
+  --popover-foreground: #F9FAFB;
+  
+  --primary: #6BA539;
+  --primary-dark: #3B6B22;
+  --primary-liété#A8D08D;
+  --primary-foreground: #ffffff;
+  
+  --secondary: #0B3D91;
+  --secondary-foreground: #ffffff;
+  
+  --nétél-50: #2A2A2A;
+  --nétél-100: #3A3A3A;
+  --nétél-200: #4B4B4B;
+  --nétél-300: #6B7280;
+  --nétél-400: #9CA3AF;
+  --nétél-500: #D1D5DB;
+  --nétél-600: #E8EAED;
+  --nétél-700: #F4F5F7;
+  --nétél-800: #F9FAFB;
+  --nétél-900: #ffffff;
+  
+  --été: #3A3A3A;
+  --été-foreground: #9CA3AF;
+  --accété#3B6B22;
+  --accétéoreground: #F9FAFB;
+  --détéctive: #EF4444;
+  --détéctive-foreground: #ffffff;
+  --border: #4B4B4B;
+  --inététransparent;
+  --inétéackground: #2A2A2A;
+  --sété-background: #4B4B4B;
+  --ring: #6BA539;
+  
+  --chété: #6BA539;
+  --chété: #0B3D91;
+  --chété: #A8D08D;
+  --chété: #3B6B22;
+  --chété: #F59E0B;
+  
+  --sidebar: #2A2A2A;
+  --sidebar-foreground: #F9FAFB;
+  --sidebar-primary: #6BA539;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accété#3A3A3A;
+  --sidebar-accétéoreground: #F9FAFB;
+  --sidebar-border: #4B4B4B;
+  --sidebar-ring: #6BA539;
+  
+  --gradiétécp: linear-gradiété35deg, #3B6B22 0%, #1C1C1C 100%);
+  --gradiétécp-liétélinear-gradiété35deg, #6BA539 0%, #3B6B22 100%);
+}
+
+@theme inline {
+  /* Base Colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-été: var(--été);
+  --color-été-foreground: var(--été-foreground);
+  --color-accétévar(--accété
+  --color-accétéoreground: var(--accétéoreground);
+  --color-détéctive: var(--détéctive);
+  --color-détéctive-foreground: var(--détéctive-foreground);
+  --color-border: var(--border);
+  --color-inétévar(--inété
+  --color-inétéackground: var(--inétéackground);
+  --color-sété-background: var(--sété-background);
+  --color-ring: var(--ring);
+  
+  /* Semété Colors */
+  --color-succès-50: var(--succès-50);
+  --color-succès-500: var(--succès-500);
+  --color-succès-600: var(--succès-600);
+  --color-warning-50: var(--warning-50);
+  --color-warning-500: var(--warning-500);
+  --color-warning-600: var(--warning-600);
+  --color-danger-50: var(--danger-50);
+  --color-danger-500: var(--danger-500);
+  --color-danger-600: var(--danger-600);
+  --color-info-50: var(--info-50);
+  --color-info-500: var(--info-500);
+  --color-info-600: var(--info-600);
+  
+  /* Nétéls */
+  --color-nétél-50: var(--nétél-50);
+  --color-nétél-100: var(--nétél-100);
+  --color-nétél-200: var(--nétél-200);
+  --color-nétél-300: var(--nétél-300);
+  --color-nétél-400: var(--nétél-400);
+  --color-nétél-500: var(--nétél-500);
+  --color-nétél-600: var(--nétél-600);
+  --color-nétél-700: var(--nétél-700);
+  --color-nétél-800: var(--nétél-800);
+  --color-nétél-900: var(--nétél-900);
+  
+  /* Chété*/
+  --color-chété: var(--chété);
+  --color-chété: var(--chété);
+  --color-chété: var(--chété);
+  --color-chété: var(--chété);
+  --color-chété: var(--chété);
+  
+  /* Border Radius */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-card: var(--radius-card);
+  --radius-inétévar(--radius-inété
+  --radius-badge: var(--radius-badge);
+  
+  /* Sidebar */
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accétévar(--sidebar-accété
+  --color-sidebar-accétéoreground: var(--sidebar-accétéoreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border éténe-ring/50;
+  }
+
+  body {
+    @apply bg-backgrounétét-foreground;
+  }
+}
+
+/**
+ * Basétéography - OCP Design Sété
+ */
+@layer base {
+  :where(:étéhas([class*=étét-"]), :étéhas([class^étét-"])))) {
+    h1 {
+      fétéize: var(étét-h1);
+      line-heiétévar(--line-h1);
+      fétéeiétévar(--fétéeiétéemibold);
+    }
+
+    h2 {
+      fétéize: var(étét-h2);
+      line-heiétévar(--line-h2);
+      fétéeiétévar(--fétéeiétéemibold);
+    }
+
+    h3 {
+      fétéize: var(étét-h3);
+      line-heiétévar(--line-h3);
+      fétéeiétévar(--fétéeiétéemibold);
+    }
+
+    h4 {
+      fétéize: var(étét-body);
+      line-heiétévar(--line-body);
+      fétéeiétévar(--fétéeiétéedium);
+    }
+
+    p {
+      fétéize: var(étét-body);
+      line-heiétévar(--line-body);
+      fétéeiétévar(--fétéeiétéormal);
+    }
+
+    label {
+      fétéize: var(étét-body);
+      line-heiétévar(--line-body);
+      fétéeiétévar(--fétéeiétéedium);
+    }
+
+    étén {
+      fétéize: var(étét-body);
+      line-heiétévar(--line-body);
+      fétéeiétévar(--fétéeiétéedium);
+    }
+
+    inété
+      fétéize: var(étét-body);
+      line-heiétévar(--line-body);
+      fétéeiétévar(--fétéeiétéormal);
+    }
+  }
+}
+
+/*étéity Typography Classes */
+@layerétéities {
+ étét-h1 {
+    fétéize: var(étét-h1);
+    line-heiétévar(--line-h1);
+  }
+  
+ étét-h2 {
+    fétéize: var(étét-h2);
+    line-heiétévar(--line-h2);
+  }
+  
+ étét-h3 {
+    fétéize: var(étét-h3);
+    line-heiétévar(--line-h3);
+  }
+  
+ étét-body {
+    fétéize: var(étét-body);
+    line-heiétévar(--line-body);
+  }
+  
+ étét-small {
+    fétéize: var(étét-small);
+    line-heiétévar(--line-small);
+  }
+  
+  .rounded-card {
+    border-radius: var(--radius-card);
+  }
+  
+  .rounded-inété
+    border-radius: var(--radius-inété
+  }
+  
+  .rounded-badge {
+    border-radius: var(--radius-badge);
+  }
+  
+  .shadow-eleétén-1 {
+    box-shadow: var(--eleétén-1);
+  }
+  
+  .shadow-eleétén-2 {
+    box-shadow: var(--eleétén-2);
+  }
+  
+  .shadow-eleétén-24 {
+    box-shadow: var(--eleétén-24);
+  }
+}
+
+html {
+  fétéize: var(--fétéize);
+  fétéamily: 'été', -apple-sété, BlinkMacSétéFété'Segoe UI', sans-serif;
+}
+
+body {
+  line-heiété1.5;
+  -webétéétéméténg: étéliased;
+  -moz-osx-fétéméténg: grayscale;
+}
+
+/* Focus Visibleétées - OCP Green */
+@layer base {
+  *:focus-visible {
+    éténe: 2px solid var(--primary);
+    éténe-offété2px;
+  }
+}
+
+/* SmétéTranéténs & Aniéténs */
+@layerétéities {
+ éténétén-hover {
+  éténétén: all 0.2s ease-in-out;
+  }
+  
+ éténétén-hover:hover {
+  éténsforméténsété(-1px);
+    box-shadow: var(--eleétén-4);
+  }
+  
+ éténétén-hover:étée {
+  éténsforméténsété(0);
+  }
+  
+  .gradiétécp {
+    background: var(--gradiétécp);
+  }
+  
+  .gradiétécp-liété
+    background: var(--gradiétécp-liété
+  }
+  
+  .shadow-eleétén-4 {
+    box-shadow: var(--eleétén-4);
+  }
+  
+  /* OCP Brand Colorétéities */
+ étét-ocp-green {
+    color: #6BA539;
+  }
+  
+  .bg-ocp-green {
+    background-color: #6BA539;
+  }
+  
+  .border-ocp-green {
+    border-color: #6BA539;
+  }
+  
+ étét-ocp-blue {
+    color: #0B3D91;
+  }
+  
+  .bg-ocp-blue {
+    background-color: #0B3D91;
+  }
+  
+  .aniétéfade-in {
+    aniétén: fadeIn 0.3s ease-in;
+  }
+  
+  .aniétéslide-up {
+    aniétén: slideUp 0.4s ease-out;
+  }
+  
+  .aniétéscale {
+    aniétén: scale 0.3s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opaété 0;
+  }
+été{
+    opaété 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opaété 0;
+  éténsforméténsété(20px);
+  }
+été{
+    opaété 1;
+  éténsforméténsété(0);
+  }
+}
+
+@keyframes scale {
+  from {
+    opaété 0;
+  éténsform: scale(0.95);
+  }
+été{
+    opaété 1;
+  éténsform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opaété 1;
+  }
+  50% {
+    opaété 0.8;
+  }
+}
+
+.aniétépulse-slow {
+  aniétén: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infiété
+}
+
+/* Advanced Aniéténs for World-Class UI */
+@keyframes shimmer {
+  0% {
+    background-poétén: -1000px 0;
+  }
+  100% {
+    background-poétén: 1000px 0;
+  }
+}
+
+@keyframes flété
+  0%, 100% {
+  éténsforméténsété(0px);
+  }
+  50% {
+  éténsforméténsété(-10px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(107, 165, 57, 0.5), 0 0 10px rgba(107, 165, 57, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(107, 165, 57, 0.8), 0 0 30px rgba(107, 165, 57, 0.5);
+  }
+}
+
+@keyframes slideInFromLété
+  from {
+  éténsforméténsété(-100%);
+    opaété 0;
+  }
+été{
+  éténsforméténsété(0);
+    opaété 1;
+  }
+}
+
+@keyframes slideInFromRiété
+  from {
+  éténsforméténsété(100%);
+    opaété 0;
+  }
+été{
+  éténsforméténsété(0);
+    opaété 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+  éténsforméténsété(-100%);
+    opaété 0;
+  }
+été{
+  éténsforméténsété(0);
+    opaété 1;
+  }
+}
+
+@keyframes slideInFrométém {
+  from {
+  éténsforméténsété(100%);
+    opaété 0;
+  }
+été{
+  éténsforméténsété(0);
+    opaété 1;
+  }
+}
+
+@keyframes bounce-in {
+  0% {
+  éténsform: scale(0.3);
+    opaété 0;
+  }
+  50% {
+  éténsform: scale(1.05);
+  }
+  70% {
+  éténsform: scale(0.9);
+  }
+  100% {
+  éténsform: scale(1);
+    opaété 1;
+  }
+}
+
+@keyframes étée {
+  from {
+  éténsform: étée(0deg);
+  }
+été{
+  éténsform: étée(360deg);
+  }
+}
+
+@keyframes progress {
+  0% {
+  éténsforméténsété(-100%);
+  }
+  100% {
+  éténsforméténsété(100%);
+  }
+}
+
+@layerétéities {
+  .aniétéshimmer {
+    background: linear-gradiété0degéténsparétérgba(255, 255, 255, 0.2)éténsparété
+    background-size: 1000px 100%;
+    aniétén: shimmer 2s infiété
+  }
+  
+  .aniétéflété
+    aniétén: flétés ease-in-éténfiété
+  }
+  
+  .aniétéglow {
+    aniétén: glow 2s ease-in-éténfiété
+  }
+  
+  .aniétéslide-in-lété
+    aniétén: slideInFromLété.5s ease-out;
+  }
+  
+  .aniétéslide-in-riété
+    aniétén: slideInFromRiété.5s ease-out;
+  }
+  
+  .aniétéslide-iété {
+    aniétén: slideInFromTop 0.5s ease-out;
+  }
+  
+  .aniétéslide-in-étém {
+    aniétén: slideInFrométém 0.5s ease-out;
+  }
+  
+  .aniétébounce-in {
+    aniétén: bounce-in 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .aniétéétée {
+    aniétén: étée 1s linear infiété
+  }
+  
+  /* Glass morphism effété/
+  .glass-effété
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-fété: blur(10px);
+    -webétéackdrop-fété: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .glass-effétéark {
+    background: rgba(28, 28, 28, 0.8);
+    backdrop-fété: blur(10px);
+    -webétéackdrop-fété: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Gradiétéorders */
+  .gradiétéorder {
+    poétén: reétée;
+    background: linear-gradiétéété wété padding-box,
+                linear-gradiété35deg, #6BA539, #0B3D91) border-box;
+    border: 2px soliéténsparent;
+  }
+  
+  /* Hover létéffété/
+  .hover-lété
+  éténéténéténsform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hover-létéover {
+  éténsforméténsété(-4px);
+    box-shadow: 0 12px 24px -10px rgba(107, 165, 57, 0.3);
+  }
+  
+  /* Smétégradiéténiétén */
+  .gradiéténiété{
+    background: linear-gradiété70deg, #6BA539, #3B6B22, #0B3D91);
+    background-size: 400% 400%;
+    aniétén: gradiétéétés ease infiété
+  }
+  
+  @keyframes gradiétéété
+    0% { background-poétén: 0% 50%; }
+    50% { background-poétén: 100% 50%; }
+    100% { background-poétén: 0% 50%; }
+  }
+  
+  /* Pulse effétéor étéiéténs */
+  .pulse-ring {
+    poétén: reétée;
+  }
+  
+  .pulse-ring::before {
+    cétét: '';
+    poétén: absoété
+  été: 50%;
+    lété50%;
+  éténsforméténsété-50%, -50%);
+    wété 100%;
+    heiété100%;
+    border-radius: 50%;
+    background: rgba(107, 165, 57, 0.4);
+    aniétén: pulseRing 2s cubic-bezier(0.215, 0.61, 0.355, 1) infiété
+  }
+  
+  @keyframes pulseRing {
+    0% {
+    éténsforméténsété-50%, -50%) scale(0.8);
+      opaété 1;
+    }
+    100% {
+    éténsforméténsété-50%, -50%) scale(2);
+      opaété 0;
+    }
+  }
+  
+  /* Skeété loading shimmer */
+  .skeété-shimmer {
+    background: linear-gradient(
+      90deg,
+      rgba(243, 244, 246, 0) 0%,
+      rgba(243, 244, 246, 0.8) 50%,
+      rgba(243, 244, 246, 0) 100%
+    );
+    background-size: 200% 100%;
+    aniétén: shimmer 1.5s infiété
+  }
+  
+  /* étéétée card effété*/
+  .card-étéétée {
+  éténétén: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: poété;
+  }
+  
+  .card-étéétée:hover {
+  éténsforméténsété(-2px) scale(1.01);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 
+                0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  .card-étéétée:étée {
+  éténsforméténsété(0) scale(0.99);
+  }
+  
+  /* Smétépagéténéténs */
+  .pagéténétén {
+    aniétén: pageété 0.4s ease-out;
+  }
+  
+  @keyframes pageété {
+    from {
+      opaété 0;
+    éténsforméténsété(20px);
+    }
+  été{
+      opaété 1;
+    éténsforméténsété(0);
+    }
+  }
+  
+  /* Success ripple effété/
+  .succès-ripple {
+    aniétén: succèsRipple 0.6s ease-out;
+  }
+  
+  @keyframes succèsRipple {
+    0% {
+      box-shadow: 0 0 0 0 rgba(107, 165, 57, 0.7);
+    }
+    100% {
+      box-shadow: 0 0 0 20px rgba(107, 165, 57, 0);
+    }
+  }
+}

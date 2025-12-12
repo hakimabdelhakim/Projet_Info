@@ -1,0 +1,42 @@
+{% extends '"base.html"' %}
+{% block content %}
+<header class="bg-white border-b sticky top-0 z-20 shadow-elevation-2">
+  <div class="max-w-[1400px] mx-auto px-4 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <img src="/static/img/ocp.png" class="h-8 w-auto" alt="OCP"/>
+      <div class="min-w-0">
+        <h1 class="text-neutral-900 text-base truncate font-semibold">Système de Prévision</h1>
+        <p class="text-xs text-neutral-500">Accouplements & Pièces détachées</p>
+      </div>
+    </div>
+  </div>
+</header>
+<main class="max-w-[1400px] mx-auto px-4 py-6 space-y-6">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div class="shadow-elevation-2 border-neutral-200 rounded-card p-4 bg-white">
+      <p class="text-small text-neutral-600">Budget utilisé</p>
+      <p class="text-h1 font-bold text-neutral-900">1,234k MAD</p>
+      <p class="text-small text-neutral-500">Sur 2,000k MAD</p>
+    </div>
+    <div class="shadow-elevation-2 border-neutral-200 rounded-card p-4 bg-white">
+      <p class="text-small text-neutral-600">Pièces critiques</p>
+      <p class="text-h1 font-bold text-neutral-900">54</p>
+      <p class="text-small text-neutral-500">Nécessitant action</p>
+    </div>
+    <div class="shadow-elevation-2 border-neutral-200 rounded-card p-4 bg-white">
+      <p class="text-small text-neutral-600">Prévision M+1</p>
+      <p class="text-h1 font-bold text-neutral-900">342</p>
+      <p class="text-small text-neutral-500">Unités</p>
+    </div>
+    <div class="shadow-elevation-2 border-neutral-200 rounded-card p-4 bg-white">
+      <p class="text-small text-neutral-600">Stock total</p>
+      <p class="text-h1 font-bold text-neutral-900">1,247</p>
+      <p class="text-small text-neutral-500">Accouplements</p>
+    </div>
+  </div>
+  <div class="bg-white border rounded-card p-4">
+    <p class="text-small text-neutral-600">Tableau de bord (squelette)</p>
+    <p class="text-neutral-900">Portage Django prêt. Les graphiques/flux temps réel seront branchés ensuite.</p>
+  </div>
+</main>
+{% endblock %}

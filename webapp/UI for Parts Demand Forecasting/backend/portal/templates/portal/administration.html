@@ -1,0 +1,30 @@
+﻿{% extends 'portal/base.html' %}
+{% block content %}
+<main class="max-w-[1200px] mx-auto p-6 space-y-4">
+  <div class="bg-white border rounded-card p-4">
+    <h2 class="text-h3 mb-3">Alertes</h2>
+    <div class="space-y-2">
+      {% for a in alerts %}
+      <form method="post" class="flex items-center justify-between border rounded-lg p-3 {% if a.type=='critique' %}border-danger-200 bg-danger-50/30{% elif a.type=='warning' %}border-warning-200 bg-warning-50/30{% else %}border-info-200 bg-info-50/30{% endif %}">
+        {% csrf_token %}
+        <div>
+          <p class="text-small font-semibold">{{ a.message }}</p>
+          <p class="text-xs text-neutral-600">{{ a.details }} â€” {{ a.date }}</p>
+        </div>
+        <div>
+          {% if not a.processed %}
+          <input type="hidden" name="alert_id" value="{{ a.id }}" />
+          <button class="h-8 px-3 rounded-input border">Traiter</button>
+          {% else %}
+          <span class="text-small text-neutral-500">TraitÃ©</span>
+          {% endif %}
+        </div>
+      </form>
+      {% empty %}
+      <p class="text-small text-neutral-600">Aucune alerte</p>
+      {% endfor %}
+    </div>
+  </div>
+</main>
+{% endblock %}
+

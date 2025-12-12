@@ -1,0 +1,51 @@
+﻿{% extends 'portal/base.html' %}
+{% block content %}
+<main class="max-w-[1400px] mx-auto px-4 py-6 space-y-4">
+  <div class="flex items-center justify-between">
+    <h2 class="text-h2">Saisie des consommations</h2>
+    <form method="get" class="flex items-center gap-2">
+      <label class="text-small text-neutral-600">Mois</label>
+      <input type="text" name="month" value="{{ month }}" class="h-9 rounded-input border-neutral-300 px-3 w-28" />
+      <button class="h-9 px-4 rounded-input gradient-ocp text-white">Aller</button>
+    </form>
+  </div>
+
+  <form method="post" class="bg-white border rounded-card p-4 overflow-x-auto">
+    {% csrf_token %}
+    {{ formset.management_form }}
+    <table class="min-w-[1000px] w-full">
+      <thead class="bg-neutral-50">
+        <tr>
+          <th class="p-3 text-left text-small">Code</th>
+          <th class="p-3 text-left text-small">DÃ©signation</th>
+          <th class="p-3 text-right text-small">PrÃ©vision</th>
+          <th class="p-3 text-center text-small">RÃ©el</th>
+          <th class="p-3 text-center text-small">Statut</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for form in formset.forms %}
+          {% with c=form.instance %}
+          <tr class="border-t hover:bg-neutral-50">
+            <td class="p-3 font-mono text-small">{{ c.part.code }}</td>
+            <td class="p-3 text-small">{{ c.part.designation }}</td>
+            <td class="p-3 text-right text-small">
+              {% with f=c.part.forecasts.all|first %}
+                {{ f.prevision_m1|default:0 }}
+              {% endwith %}
+            </td>
+            <td class="p-3 text-center">{{ form.id }}{{ form.quantity }}</td>
+            <td class="p-3 text-center">{{ form.status }}</td>
+          </tr>
+          {% endwith %}
+        {% endfor %}
+      </tbody>
+    </table>
+    <div class="flex items-center justify-between mt-4">
+      <div class="text-small text-neutral-600">Total prÃ©vision: <span class="font-semibold text-neutral-900">{{ total_prev }}</span> â€” Total rÃ©el: <span class="font-semibold text-primary">{{ total_reel }}</span></div>
+      <button class="h-10 px-6 rounded-input gradient-ocp text-white">Enregistrer</button>
+    </div>
+  </form>
+</main>
+{% endblock %}
+

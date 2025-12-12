@@ -1,0 +1,33 @@
+﻿{% extends 'portal/base.html' %}
+{% block content %}
+<main class="max-w-[1400px] mx-auto px-4 py-6 space-y-6">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div class="shadow-elevation-2 border-neutral-200 rounded-card p-4 bg-white">
+      <p class="text-small text-neutral-600">Budget utilisé</p>
+      <p class="text-h1 font-bold text-neutral-900">{{ kpi.budget.used|divisibleby:1000 }}k MAD</p>
+      <p class="text-small text-neutral-500">Sur {{ kpi.budget.total|divisibleby:1000 }}k MAD</p>
+    </div>
+    <div class="shadow-elevation-2 border-neutral-200 rounded-card p-4 bg-white">
+      <p class="text-small text-neutral-600">Pièces critiques</p>
+      <p class="text-h1 font-bold text-neutral-900">{{ kpi.critical_parts }}</p>
+      <p class="text-small text-neutral-500">Nécessitant action</p>
+    </div>
+    <div class="shadow-elevation-2 border-neutral-200 rounded-card p-4 bg-white">
+      <p class="text-small text-neutral-600">Prévision M+1</p>
+      <p class="text-h1 font-bold text-neutral-900">{{ kpi.forecast_next }}</p>
+      <p class="text-small text-neutral-500">Unités</p>
+    </div>
+    <div class="shadow-elevation-2 border-neutral-200 rounded-card p-4 bg-white">
+      <p class="text-small text-neutral-600">Stock total</p>
+      <p class="text-h1 font-bold text-neutral-900">{{ kpi.stock_total }}</p>
+      <p class="text-small text-neutral-500">Accouplements</p>
+    </div>
+  </div>
+  <div class="bg-white border rounded-card p-4">
+    <p class="text-small text-neutral-600">Tableau de bord (squelette Django)</p>
+    <p class="text-neutral-900">Portage initial prêt. Les graphiques/flux seront ajoutés ensuite.</p>
+  </div>
+</main>
+{% endblock %}
+
+

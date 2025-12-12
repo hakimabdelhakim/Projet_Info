@@ -1,0 +1,1 @@
+const t="hist_gradient_boosting_best",e={acc_within_1:.78099173553719,mae:.7638984619477441,rmse:1.5507089240525178},s={acc_within_1:.9008264462809917,mae:.40103132086203597,rmse:.7203153643974176},c={best_model:t,test:e,val:s};export{t as best_model,c as default,e as test,s as val};

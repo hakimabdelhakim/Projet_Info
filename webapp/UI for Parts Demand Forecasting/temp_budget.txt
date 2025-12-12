@@ -1,0 +1,32 @@
+﻿import 
+  const handleTogglePurchase = async (code: string) => {
+    setPurchases(prev => prev.map(p => (p.code === code ? { ...p, selected: !p.selected } : p)));
+    try {
+      const res = await apiGetBudget();
+      const line = Array.isArray(res?.items) ? res.items.find((l: any) => l.code === code) : null;
+      if (line) { await apiToggleBudget(line.id); }
+    } catch {}
+  };
+
+  const handleToggleAll = async () => {
+    const allSelected = purchases.every(p => p.selected);
+    setPurchases(prev => prev.map(p => ({ ...p, selected: !allSelected })));
+    try { await apiToggleAllBudget(); } catch {}
+  };
+
+  const handleApprove = async () => {
+    if (isOverBudget) {
+      toast.error('Dépassement de budget!', {
+        description: Le budget disponible est insuffisant. Déficit:  MAD
+      });
+      return;
+    }
+    try { await apiApproveBudget(); } catch {}
+    toast.success('Achats approuvés!', {
+      description: ${selectedPurchases.length} achats validés pour un total de  MAD
+    });
+    setTimeout(() => {
+      setPurchases(prev => prev.map(p => ({ ...p, selected: false })));
+    }, 1000);
+  };
+

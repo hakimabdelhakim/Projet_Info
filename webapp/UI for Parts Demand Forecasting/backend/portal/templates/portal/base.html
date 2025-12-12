@@ -1,0 +1,50 @@
+﻿<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OCP Forecast</title>
+  <link rel="stylesheet" href="/static/css/app.css" />
+</head>
+<body class="min-h-screen bg-background">
+  <header class="bg-white border-b border-neutral-200 sticky top-0 z-20 shadow-elevation-2">
+    <div class="max-w-[1400px] mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="/" class="flex items-center gap-3">
+          <img src="/static/img/ocp.png" class="h-8 w-auto" alt="OCP" />
+          <div class="min-w-0">
+            <h1 class="text-neutral-900 text-base truncate font-semibold">Système de Prévision</h1>
+            <p class="text-xs text-neutral-500">Accouplements & Pièces détachées</p>
+          </div>
+        </a>
+      </div>
+      <nav class="hidden md:flex items-center gap-4">
+        <a class="text-small hover:text-primary" href="/previsions/">Prévisions</a>
+        <a class="text-small hover:text-primary" href="/saisie/">Saisie</a>
+        <a class="text-small hover:text-primary" href="/budget/">Budget</a>
+        <a class="text-small hover:text-primary" href="/administration/">Administration</a>
+      </nav>
+      <div>
+        {% if user %}
+          <span class="text-small text-neutral-600 mr-2">Connecté en tant que</span>
+          <span class="text-small font-medium">{{ user.nom }}</span>
+          <a href="/logout/" class="ml-3 text-small text-primary">Déconnexion</a>
+        {% else %}
+          <a href="/login/" class="text-small text-primary">Connexion</a>
+        {% endif %}
+      </div>
+    </div>
+  </header>
+  {% if messages %}
+  <div class="max-w-[1200px] mx-auto px-4 mt-3">
+    {% for message in messages %}
+      <div class="mb-2 p-3 rounded-lg border {% if message.tags == 'success' %}border-success-300 bg-success-50 text-success-700{% elif message.tags == 'error' %}border-danger-300 bg-danger-50 text-danger-700{% else %}border-neutral-300 bg-neutral-50 text-neutral-700{% endif %}">{{ message }}</div>
+    {% endfor %}
+  </div>
+  {% endif %}
+  {% block content %}{% endblock %}
+</body>
+</html>
+
+
+

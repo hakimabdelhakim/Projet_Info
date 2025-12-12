@@ -1,0 +1,81 @@
+﻿{% extends 'portal/base.html' %}
+{% block content %}
+<main class="max-w-[1400px] mx-auto px-4 py-6 space-y-4">
+  <form method="get" class="bg-white border rounded-card p-4 flex flex-wrap items-end gap-4">
+    <div>
+      <label class="text-xs text-neutral-600">Recherche</label>
+      <input type="text" name="q" value="{{ q }}" class="h-10 rounded-input border-neutral-300 px-3" placeholder="Code ou désignation" />
+    </div>
+    <div>
+      <label class="text-xs text-neutral-600">Type</label>
+      <select name="type" class="h-10 rounded-input border-neutral-300 px-2">
+        <option value="">Tous</option>
+        <option value="elastic" {% if type_f=='elastic' %}selected{% endif %}>Élastique</option>
+        <option value="rigid" {% if type_f=='rigid' %}selected{% endif %}>Rigide</option>
+        <option value="hydraulic" {% if type_f=='hydraulic' %}selected{% endif %}>Hydraulique</option>
+      </select>
+    </div>
+    <div>
+      <label class="text-xs text-neutral-600">Criticité</label>
+      <select name="criticite" class="h-10 rounded-input border-neutral-300 px-2">
+        <option value="">Tous</option>
+        <option value="urgent" {% if crit_f=='urgent' %}selected{% endif %}>Urgent</option>
+        <option value="moyen" {% if crit_f=='moyen' %}selected{% endif %}>Moyen</option>
+        <option value="normal" {% if crit_f=='normal' %}selected{% endif %}>Normal</option>
+      </select>
+    </div>
+    <div>
+      <label class="text-xs text-neutral-600">Fournisseur</label>
+      <select name="supplier" class="h-10 rounded-input border-neutral-300 px-2">
+        <option value="">Tous</option>
+        {% for s in suppliers %}
+          <option value="{{ s.id }}" {% if supp_f|default:'' == s.id|stringformat:'s' %}selected{% endif %}>{{ s.name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div>
+      <label class="text-xs text-neutral-600">Mois</label>
+      <input type="text" name="month" value="{{ month }}" class="h-10 rounded-input border-neutral-300 px-3 w-28" />
+    </div>
+    <button class="h-10 px-4 rounded-input gradient-ocp text-white">Filtrer</button>
+  </form>
+
+  <div class="bg-white border rounded-card p-4 overflow-x-auto">
+    <table class="min-w-[1000px] w-full">
+      <thead class="bg-neutral-50">
+        <tr>
+          <th class="text-left p-3 text-small">Code</th>
+          <th class="text-left p-3 text-small">Désignation</th>
+          <th class="text-left p-3 text-small">Type</th>
+          <th class="text-left p-3 text-small">Criticité</th>
+          <th class="text-right p-3 text-small">Stock actuel</th>
+          <th class="text-right p-3 text-small">Moy. M-3</th>
+          <th class="text-right p-3 text-small">Prév. M+1</th>
+          <th class="text-right p-3 text-small">Prix unit. (MAD)</th>
+          <th class="text-left p-3 text-small">Fournisseur</th>
+          <th class="text-right p-3 text-small">Délai (j)</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for f in items %}
+        <tr class="border-t hover:bg-neutral-50">
+          <td class="p-3 font-mono text-small">{{ f.part.code }}</td>
+          <td class="p-3 text-small">{{ f.part.designation }}</td>
+          <td class="p-3 text-small">{{ f.part.get_type_display }}</td>
+          <td class="p-3 text-small">{{ f.part.get_criticite_display }}</td>
+          <td class="p-3 text-right text-small">{{ f.part.stock_actuel }}</td>
+          <td class="p-3 text-right text-small">{{ f.moyenne_m3 }}</td>
+          <td class="p-3 text-right text-small">{{ f.prevision_m1 }}</td>
+          <td class="p-3 text-right text-small">{{ f.part.unit_price }}</td>
+          <td class="p-3 text-small">{{ f.part.supplier.name }}</td>
+          <td class="p-3 text-right text-small">{{ f.part.lead_time_days }}</td>
+        </tr>
+        {% empty %}
+        <tr><td class="p-3" colspan="10">Aucune donnée</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</main>
+{% endblock %}
+

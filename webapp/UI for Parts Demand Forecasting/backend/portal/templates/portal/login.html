@@ -1,0 +1,22 @@
+﻿{% extends 'portal/base.html' %}
+{% block content %}
+<main class="min-h-screen flex items-center justify-center p-4">
+  <form method="post" class="w-full max-w-md bg-white border rounded-card p-6 shadow-elevation-4">
+    {% csrf_token %}
+    <h2 class="text-h2 mb-4">Connexion</h2>
+    {% if error %}<div class="mb-3 text-danger-600 text-small">{{ error }}</div>{% endif %}
+    <div class="space-y-2 mb-4">
+      <label class="text-small">Utilisateur ou email</label>
+      <input name="username" class="w-full border rounded-input h-11 px-3" />
+    </div>
+    <div class="space-y-2 mb-6">
+      <label class="text-small">Mot de passe</label>
+      <input name="password" type="password" class="w-full border rounded-input h-11 px-3" />
+    </div>
+    <button class="w-full h-11 gradient-ocp text-white rounded-input">Se connecter</button>
+    <div class="text-xs text-neutral-500 mt-4">Démos: manager/demo, appro/demo, logistique/demo</div>
+  </form>
+</main>
+{% endblock %}
+
+
